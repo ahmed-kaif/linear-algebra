@@ -72,5 +72,8 @@ elif option == "2":
 elif option == "3":
     matrix1 = matrix_input()
     power = int(input("Power: "))
-    result = np.linalg.matrix_power(matrix1, power)
-    console.print("Resultant Matrix:\n",result)
+    try:
+        result = np.linalg.matrix_power(matrix1, power)
+        console.print("Resultant Matrix:\n",result)
+    except np.linalg.LinAlgError:
+        console.print("Error: Please enter a square matrix",style=red_style)

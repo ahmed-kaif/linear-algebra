@@ -12,6 +12,6 @@ matrixx = np.array(example_matrix).reshape(Rows,Columns) # converting matrix to 
 
 try:
     rank = np.linalg.matrix_rank(matrixx)
-    print("Rank: ",rank, "\n")
+    print("Rank:",rank, "\n")
 except Exception as e:
     print("error:", e, "\n")
