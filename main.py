@@ -105,7 +105,7 @@ def matrix_multiplication() -> None:
     elif option == "2":
         matrixA = matrix_input()
         A = symbols("A")
-        expr_str = Prompt.ask("Enter an expression in terms of A")
+        expr_str = Prompt.ask("Enter an expression in terms of A like A + A**2")
         try:
             expr = sympify(expr_str)
         except:
