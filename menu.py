@@ -11,8 +11,9 @@ Select Option
 '''
 md = Markdown(menu)
 console = Console()
+os.system("clear")
 console.print(md)
-option = Prompt.ask("Enter your choice",choices=["1","2","3"])
+option = Prompt.ask("Enter your choice",choices=["1","2","3","4"])
 try:
     if option == "1":
         os.system("clear")
@@ -23,5 +24,7 @@ try:
     elif option == "3":
         os.system("clear")
         os.system("python matrix_expression.py")
+    elif option == "4":
+        exit(0)
 except:
     print("Bye")
