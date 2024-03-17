@@ -22,6 +22,13 @@ red_style = Style(color="red")
 green_style = Style(color="green")
 
 
+def clear():
+    if os.name == "posix":
+        os.system("clear")
+    elif os.name == "nt":
+        os.system("cls")
+
+
 def menu() -> int:
     menu = """# Linear Algebra Calculator
     Select Option
@@ -31,7 +38,7 @@ def menu() -> int:
     4. Quit
     """
     md = Markdown(menu)
-    os.system("clear")
+    clear()
     console.print(md)
     option = Prompt.ask("Enter your choice", choices=["1", "2", "3", "4"])
     return int(option)
@@ -80,7 +87,7 @@ def matrix_multiplication() -> None:
     3. Matrix Power
     """
     md = Markdown(menu)
-    os.system("clear")
+    clear()
     console.print(md)
     option = Prompt.ask("Enter your choice", choices=["1", "2", "3"])
     # Multiply 2 matrices
@@ -138,12 +145,12 @@ def matrix_multiplication() -> None:
 
 def select(opt: int) -> None:
     if opt == Option["RANK"].value:
-        os.system("clear")
+        clear()
         console.print(Markdown("## Rank"))
         matrix = matrix_input()
         calculate_rank(matrix)
     if opt == Option["EIGEN"].value:
-        os.system("clear")
+        clear()
         console.print(Markdown("## EigenValue"))
         matrix = matrix_input()
         calculate_eig(matrix)
