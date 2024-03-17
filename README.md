@@ -7,6 +7,8 @@ This is a simple linear algebra calculator that can calculate
     - evaluate a matrix expression
     - matrix power
 
+![Screenshot](./screenshot.png)
+
 # Installation
 You can download the executable file from the release section.
 - For windows download `linear_algebra_win.exe`
